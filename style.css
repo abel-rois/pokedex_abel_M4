@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background: url(./img/header_background.png);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -15,6 +15,55 @@ h1 {
     font-size: 28px;
     margin: 0;
 }
+
+.poke-logo {
+    width: 18%;
+}
+
+.btn:hover {
+    animation-name: bounce;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    25%,
+    75% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  section {
+    background: url(./img/poke_background.jpg);
+    color: #eee;
+    width: 100%;
+    height: 76vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    animation: animation 100s linear infinite;
+    padding-bottom: 70px;
+  }
+  
+  @keyframes animation {
+     100%{
+      background-position:0px -3000px;
+    }
+  }
 
 #search-input {
     width: 90%;
@@ -44,8 +93,36 @@ h1 {
 
 .poke-card {
     border: 1px solid #ccc;
+    border-radius: 1rem;
+    background-color: rgb(0, 0, 128);
     margin: 10px auto;
     padding: 10px;
     width: 200px;
     text-align: center;
 }
+
+.poke-card:hover {
+    animation-name: wiggle;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translate(0,0);
+    }
+    25%,
+    75% {
+      transform: translate(10px,0);
+    }
+    50% {
+      transform: translate(-10px,0);
+    }
+  }
+  
